@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="mobile.js"></script>
+</head>
+<body>
+<script>
+
+    let mobileQuan = new Mobile(1,[],[],[],true);
+    let mobileLuyt = new Mobile(99,[],[],[],true);
+    if (mobileQuan.checkStatus() === true) {
+        alert("Dt dang bat")
+    }
+    mobileQuan.chargeBattery();
+    alert("Pin dien thoai cua Quan: "+mobileQuan.battery)
+    mobileQuan.createMessage("Hello C1121G1");
+    mobileQuan.receiveMessage("Hello Quan", mobileLuyt);
+    mobileLuyt.sentMessage("Hello 2", mobileQuan);
+</script>
+</body>
+</html>
